@@ -5,6 +5,12 @@ Artificial Intelligence - Project 01
 Cretor: Luís Costa  
 Repository: https://github.com/ffernandesc/IA25_P01_18650
 
+## Note:
+
+This project is strictly an academic solution to a given problem. It should not be used comercially.
+I, the creator, **do not** take responsibility for the improper use of the code rpesent in this repository.
+All rights reserved.
+
 ## Project Description
 
 This project implements an agent for weekly night-shift factory scheduling.
