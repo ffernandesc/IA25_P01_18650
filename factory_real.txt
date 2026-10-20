@@ -1,0 +1,54 @@
+#head
+— All tasks last 2 hours
+— Production runs on the night shift, from Monday to Friday
+— The night shift goes from 18h to 9h (next day), with a 1-hour meal/cleaning break
+— Each night has 7 blocks of 2 hours each
+— Blocks are numbered from 1 to 35 (5 nights * 7 blocks), Monday 18h to Saturday 9h
+— In this dataset all tasks have 2 runs per week
+
+#lt — tasks assigned to production lines (line, tasks*)
+INJ        MOLD PURG REBA CTQ EMBA
+MAQ        FRES TORN CTQ ACAB RETI
+MON        MNTG CABL TEST APAR SOLD
+ACB        LAVA PINT VERN ETIQ
+
+#tue — tasks with just one run per week
+
+#to — tasks assigned to operators (operator, tasks*)
+Carlos       MOLD PURG REBA EMBA CTQ
+Bruno        FRES TORN ACAB RETI CTQ
+Sofia        MNTG CABL TEST
+Helena       APAR SOLD
+Rui          LAVA PINT
+Tânia        VERN ETIQ
+
+#mt — tasks each machine can perform (machine, tasks*)
+INJ01      MOLD PURG REBA EMBA
+INJ02      MOLD PURG REBA
+CNC01      FRES TORN ACAB RETI
+BAN01      MNTG CABL TEST APAR SOLD ETIQ EMBA
+CAB01      LAVA PINT VERN ETIQ
+CTQ01      CTQ
+
+#im — machine maintenance windows (machine, slots_unavailable*)
+INJ02      13 14 15 16 17 18 19 20
+CTQ01       1  2  3  4
+
+#io — operator unavailability (operator, slots_unavailable*)
+Tânia       9  10 11 12 17 18 19 20
+
+#rm — machine restrictions (task, machine)
+EMBA       BAN01
+MOLD       INJ01
+
+#rt — remote / teleoperated tasks (task, run_week_index)
+TEST        2
+VERN        2
+
+#machines — available machines
+INJ01
+INJ02
+CNC01
+BAN01
+CAB01
+CTQ01
